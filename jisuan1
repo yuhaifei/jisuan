@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+
+  
+public class jisuan {  
+	private static int result; // 静态变量，用于存储运行结果
+	public static void add(int n) {    //加
+		result = result + n; 
+	}
+public static void substract(int n) {//减
+	result = result - n;  
+	}   
+
+
+public static int getResult() {  
+	return result;  
+	}  
+}  
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class jisuanTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void testSubstract() {
+		jisuan.add(10);  
+		jisuan.substract(2);  
+	    assertEquals(8, jisuan.getResult()); 
+	}
+
+	
+
+}
